@@ -40,15 +40,14 @@ elif page == "Resultados y Análisis":
     st.markdown("""
     En esta sección exploraremos las visualizaciones, el análisis de características y las métricas de los modelos utilizados en este estudio. También explicaremos cómo hemos llegado a nuestras conclusiones.  
     """)
-
-    # 📂 Carga del Dataset
+  # 📂 Carga del Dataset desde Google Drive
     st.header("📂 Carga del Dataset")
     try:
-        # Ruta al dataset
-        dataset_path = r"C:\Users\Propietario\Documents\IronHack 01\Machine_Learning_for_Breast_Cancer_Diagnostics\Machine_Learning_for_Breast_Cancer_Diagnostics\datos\4_dataset_sin_correlaciones_altas.csv"
+        # Enlace del dataset en Google Drive (convertido a un enlace de descarga directa)
+        dataset_url = "https://drive.google.com/uc?id=11JfDkt8ZCXXOC2yFYf5ITHpMTzOR14nm"
 
-        # Cargar dataset
-        df = pd.read_csv(dataset_path)
+        # Cargar dataset directamente desde el enlace de Google Drive
+        df = pd.read_csv(dataset_url)
         st.success("Dataset cargado exitosamente. Aquí están las primeras filas:")
         st.dataframe(df.head())  # Mostrar las primeras filas del dataset
 
@@ -56,6 +55,7 @@ elif page == "Resultados y Análisis":
         st.error("Hubo un error al cargar el dataset. Por favor verifica la ruta y el archivo.")
         st.text(f"Detalles del error: {e}")
         st.stop()
+
 
     # 🛠️ Pasos del Proyecto
     st.header("🛠️ Pasos del Proyecto")
