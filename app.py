@@ -19,7 +19,7 @@ page = st.sidebar.selectbox(
 
 # 🌟 Pantalla 1: Portada
 if page == "Portada":
-    st.title("🎗️ Bienvenidos al Proyecto de Diagnóstico de Cáncer de Mama")
+    st.title(" Bienvenidos al Proyecto de Diagnóstico de Cáncer de Mama")
     st.markdown("""
     Este proyecto explora cómo las técnicas de **Machine Learning** pueden asistir en el diagnóstico temprano de tumores mamarios, clasificándolos en **benignos** o **malignos**.
     El cáncer de mama es uno de los desafíos más importantes en el ámbito de la salud pública, siendo una de las principales causas de mortalidad en mujeres. Según la Organización Mundial de la Salud (OMS), el diagnóstico temprano es clave para aumentar las probabilidades de supervivencia.
